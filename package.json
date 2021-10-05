@@ -1,0 +1,23 @@
+{
+  "name": "github-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.{js,scss}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladimirs1981/git-hub-search.git"
+  },
+  "author": "Vladimir Stojanovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladimirs1981/git-hub-search/issues"
+  },
+  "homepage": "https://github.com/vladimirs1981/git-hub-search#readme",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}

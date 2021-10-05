@@ -1,0 +1,108 @@
+@use '_colors' as *;
+@use '_variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: $primaryFont;
+    background-color: $l-modeGreyish;
+    display: flex;
+    justify-content: center;
+}
+
+.dark-mode {
+    background-color: $d-modeDarkGrey;
+
+    main {
+        background-color: $d-modeDarkGrey;
+
+        header {
+            h1 {
+                color: $textWhite;
+            }
+
+            button {
+                .button-text {
+                    color: $textWhite;
+                    &:hover {
+                        color: $greyHover;
+                    }
+                }
+
+                .button-image {
+                    color: $textWhite;
+                    #moon {
+                        display: none;
+                    }
+
+                    #sun {
+                        display: block;
+
+                        &:hover {
+                            path {
+                                color: $greyHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form {
+            color: $textWhite;
+            background-color: $d-modeDarkGrey;
+
+            input {
+                background-color: $d-modeDarkBlue;
+                box-shadow: none;
+            }
+        }
+
+        .main-section {
+            background-color: $d-modeDarkBlue;
+            box-shadow: none;
+
+            .user-info {
+                aside {
+                    h2,
+                    .joined-date {
+                        color: $textWhite;
+                    }
+                }
+            }
+
+            .info-text {
+                h3 {
+                    color: $textWhite;
+                }
+            }
+
+            .stats {
+                background-color: $d-modeDarkGrey;
+
+                .stats-div {
+                    h3,
+                    h1 {
+                        color: $textWhite;
+                    }
+                }
+            }
+
+            footer {
+                figure {
+                    color: $textWhite;
+
+                    figcaption {
+                        color: $textWhite;
+                    }
+                }
+            }
+        }
+    }
+}

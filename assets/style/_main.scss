@@ -1,0 +1,490 @@
+@use '_colors' as *;
+@use '_variables' as *;
+
+main {
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @media only screen and (min-width: 768px) {
+        margin-top: 140px;
+        width: 573px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+        margin-top: 144px;
+        width: 730px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 31px;
+        margin-bottom: 36px;
+        min-width: 327px;
+
+        @media only screen and (min-width: 768px) {
+            margin: 0;
+            width: 100%;
+            margin-bottom: 36px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: $headingBlack;
+        }
+
+        button {
+            display: flex;
+            width: 78px;
+            justify-content: space-between;
+            border: none;
+            background-color: inherit;
+            font-family: $primaryFont;
+            &:hover {
+                cursor: pointer;
+                color: $blackHover;
+            }
+
+            .button-text {
+                font-size: 13px;
+                font-weight: bold;
+                color: $l-modelightDarkBlue;
+                text-transform: uppercase;
+                letter-spacing: 2.5px;
+                line-height: 19.25px;
+                &:hover {
+                    color: $blackHover;
+                }
+            }
+
+            .button-image {
+                width: 20px;
+                height: 20px;
+                color: $l-modelightDarkBlue;
+                &:hover {
+                    path {
+                        color: $blackHover;
+                    }
+                }
+
+                #sun {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .form {
+        display: flex;
+        position: relative;
+        min-width: 327px;
+        margin-bottom: 16px;
+        height: auto;
+        background-color: $l-modeWhiteish;
+        border-radius: 15px;
+
+        @media only screen and (min-width: 768px) {
+            width: 100%;
+            margin-bottom: 24px;
+        }
+
+        input {
+            font-family: inherit;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 25px;
+            width: 100%;
+            border: none;
+            height: 69px;
+            color: $l-modelightDarkBlue;
+            box-shadow: 0px 16px 30px -10px $main-shadow;
+            border-radius: 15px;
+            &:hover {
+                cursor: pointer;
+            }
+            &::placeholder {
+                position: absolute;
+                left: 45px;
+                top: 18px;
+
+                @media only screen and (min-width: 768px) {
+                    top: 22px;
+                    left: 80px;
+                }
+            }
+
+            @media only screen and (min-width: 768px) {
+                font-size: 18px;
+            }
+        }
+
+        img {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 20px;
+            left: 16px;
+
+            @media only screen and (min-width: 768px) {
+                top: 23px;
+                left: 32px;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        button {
+            font-family: inherit;
+            align-self: center;
+            position: absolute;
+            right: 7px;
+            min-width: 84px;
+            height: 46px;
+            border: none;
+            background: $lightBlue;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            color: $textWhite;
+            &:hover {
+                background: $blueHover;
+                cursor: pointer;
+            }
+            &:active {
+                background: $lightBlue;
+            }
+
+            @media only screen and (min-width: 768px) {
+                width: 106px;
+                height: 50px;
+                font-size: 16px;
+            }
+        }
+
+        small {
+            display: none;
+            position: absolute;
+            top: 24px;
+            right: 140px;
+            font-size: 15px;
+            font-weight: bold;
+            color: $errorRed;
+        }
+    }
+
+    .main-section {
+        width: 327px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $l-modeWhiteish;
+        border-radius: 15px;
+        box-shadow: 0px 16px 30px -10px $main-shadow;
+
+        @media only screen and (min-width: 768px) {
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 1440px) {
+            display: grid;
+            width: 730px;
+            height: 419px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            justify-items: start;
+            align-items: center;
+        }
+
+        .user-info {
+            display: flex;
+            width: 100%;
+            padding-left: 24px;
+            margin-top: 32px;
+            margin-bottom: 33px;
+
+            @media only screen and (min-width: 768px) {
+                padding-left: 40px;
+                margin-top: 40px;
+                margin-bottom: 24px;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                grid-area: 1 / 1 / 2 / 3;
+                padding-left: 48px;
+                margin-top: 48px;
+                position: relative;
+            }
+
+            span {
+                background-image: url(../face.jpg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                margin-right: 19px;
+
+                @media only screen and (min-width: 768px) {
+                    width: 117px;
+                    height: 117px;
+                    margin-right: 41px;
+                }
+
+                @media only screen and (min-width: 1440px) {
+                    margin-right: 45px;
+                }
+            }
+
+            aside {
+                text-align: left;
+
+                @media only screen and (min-width: 768px) {
+                    margin-top: 15px;
+                }
+
+                @media only screen and (min-width: 1440px) {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    margin: 0;
+                    align-content: center;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    justify-items: start;
+                    margin-top: -65px;
+                }
+
+                h2 {
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: bold;
+                    line-height: 23px;
+                    color: $l-modeDarkGrey;
+
+                    @media only screen and (min-width: 768px) {
+                        font-size: 26px;
+                        line-height: 39px;
+                    }
+                }
+
+                a {
+                    font-size: 13px;
+                    color: $lightBlue;
+                    line-height: 19px;
+                    font-style: normal;
+                    font-weight: normal;
+
+                    @media only screen and (min-width: 768px) {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+
+                    @media only screen and (min-width: 1440px) {
+                        grid-area: 2/1/2/1;
+                    }
+                }
+
+                .joined-date {
+                    font-size: 13px;
+                    line-height: 19px;
+                    font-style: normal;
+                    font-weight: normal;
+                    color: $l-modelightGrey;
+
+                    @media only screen and (min-width: 768px) {
+                        font-size: 15px;
+                        line-height: 22px;
+                    }
+
+                    @media only screen and (min-width: 1440px) {
+                        grid-area: 1/3/1/3;
+                        position: absolute;
+                        top: 5px;
+                        right: 48px;
+                    }
+                }
+            }
+        }
+
+        .info-text {
+            margin-left: 24px;
+            margin-bottom: 23px;
+
+            @media only screen and (min-width: 768px) {
+                margin-left: 40px;
+                margin-bottom: 32px;
+                margin-right: 40px;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                margin: 0;
+                grid-area: 2/2/3/3;
+                margin-right: 40px;
+                margin-top: -140px;
+            }
+
+            h3 {
+                font-size: 13px;
+                line-height: 25px;
+                font-style: normal;
+                font-weight: 400;
+                color: $l-modelightDarkBlue;
+
+                @media only screen and (min-width: 768px) {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: $l-modeGreyish;
+            border-radius: 10px;
+            width: 279px;
+            height: 85px;
+            margin-bottom: 24px;
+
+            @media only screen and (min-width: 768px) {
+                width: 493px;
+                justify-content: flex-start;
+                padding-left: 32px;
+                margin-bottom: 30px;
+            }
+            @media only screen and (min-width: 1440px) {
+                margin: 0;
+                margin-right: 40px;
+                margin-top: -100px;
+                width: 480px;
+                grid-area: 3 / 2 / 4 / 3;
+            }
+
+            .stats-div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                @media only screen and (min-width: 768px) {
+                    align-items: flex-start;
+                    justify-content: center;
+                }
+
+                h3 {
+                    font-size: 11px;
+                    color: $l-modelightDarkBlue;
+                    font-style: normal;
+                    font-weight: normal;
+
+                    @media only screen and (min-width: 768px) {
+                        font-size: 13px;
+                        line-height: 19.25px;
+                        margin-bottom: 1px;
+                    }
+                }
+
+                h1 {
+                    font-size: 16px;
+                    color: $l-modeDarkGrey;
+                    line-height: 24px;
+
+                    @media only screen and (min-width: 768px) {
+                        font-size: 22px;
+                        line-height: 33px;
+                    }
+                }
+            }
+            @media only screen and (min-width: 768px) {
+                #repos {
+                    margin-right: 99px;
+                }
+            }
+
+            @media only screen and (min-width: 768px) {
+                #followers {
+                    margin-right: 82px;
+                }
+            }
+        }
+
+        footer {
+            align-self: flex-start;
+            margin-left: 24px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-evenly;
+
+            @media only screen and (min-width: 768px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-left: 40px;
+                column-gap: 70px;
+            }
+
+            @media only screen and (min-width: 1440px) {
+                margin: 0;
+                grid-area: 4 / 2 / 5 / 3;
+                margin-bottom: 30px;
+            }
+
+            figure {
+                display: flex;
+                justify-content: flex-start;
+                margin-bottom: 16px;
+                color: $l-modelightDarkBlue;
+
+                figcaption {
+                    font-size: 13px;
+                    line-height: 19.25px;
+                    font-weight: 400;
+                    color: $l-modelightDarkBlue;
+                    margin-left: 13px;
+
+                    @media only screen and (min-width: 768px) {
+                        font-size: 15px;
+                        line-height: 22px;
+                    }
+                }
+
+                .city {
+                    margin-left: 19.25px;
+                }
+            }
+
+            .twitter {
+                opacity: 0.5;
+
+                @media only screen and (min-width: 768px) {
+                    order: -1;
+                }
+            }
+
+            .location {
+                @media only screen and (min-width: 768px) {
+                    order: -1;
+                }
+            }
+
+            .link {
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
