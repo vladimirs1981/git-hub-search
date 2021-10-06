@@ -1,0 +1,94 @@
+const inputValue = document.querySelector('#search');
+const searchButton = document.querySelector('.searchButton');
+const imageContainer = document.querySelector('.image');
+const nameContainer = document.querySelector('.main_profile-name');
+const unContainer = document.querySelector('.main_profile-username');
+const bioContainer = document.querySelector('.bio-info');
+const reposContiner = document.querySelector('.main_profile-repos');
+const followersContiner = document.querySelector('.main_profile-followers');
+const followingContiner = document.querySelector('.main_profile-following');
+const cityContainer = document.querySelector('.city');
+const twitterContainer = document.querySelector('.twitter');
+const urlContainer = document.querySelector('.main_profile-url');
+const companyContainer = document.querySelector('.company');
+
+const noresults = document.querySelector('.noresults');
+
+const client_secret = '7753fdad58bb42c0d28741064dc7aa67381d8530';
+const client_id = 'Iv1.71a7a9f9a18f113a';
+
+const fetchUsers = async (user) => {
+    const api_call = await fetch(
+        `https://api.github.com/users/${user}?client_id=${client_id}&client_secret=${client_secret}`
+    );
+
+    const data = await api_call.json();
+    return { data };
+};
+
+const showData = () => {
+    fetchUsers(inputValue.value).then((res) => {
+        console.log(res);
+
+        function setOPacity(api_data, data) {
+            if (api_data === null) {
+                data.style.opacity = 0.5;
+                data.previousElementSibling.style.opacity = 0.5;
+                return 'Not available';
+            } else {
+                return `${api_data}`;
+            }
+        }
+
+        if (res.data.message !== 'Not Found') {
+            noresults.style.display = 'none';
+
+            imageContainer.innerHTML = `<img src="${res.data.avatar_url}"/>`;
+
+            nameContainer.innerHTML =
+                res.data.name == null
+                    ? `${res.data.login}`
+                    : `${res.data.name}`;
+
+            unContainer.innerHTML = `@${res.data.login}`;
+
+            bioContainer.innerHTML =
+                res.data.bio == null
+                    ? 'This profile has no bio'
+                    : `${res.data.bio}`;
+
+            reposContiner.innerHTML = `${res.data.public_repos}`;
+
+            followersContiner.innerHTML = `${res.data.followers}`;
+
+            followingContiner.innerHTML = `${res.data.following}`;
+
+            cityContainer.innerHTML = setOPacity(
+                res.data.location,
+                cityContainer
+            );
+
+            urlContainer.innerHTML = setOPacity(
+                res.data.html_url,
+                urlContainer
+            );
+
+            twitterContainer.innerHTML = setOPacity(
+                res.data.twitter_username,
+                twitterContainer
+            );
+
+            companyContainer.innerHTML = setOPacity(
+                res.data.company,
+                companyContainer
+            );
+        } else {
+            noresults.style.display = 'block';
+        }
+    });
+};
+
+searchButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    showData();
+});

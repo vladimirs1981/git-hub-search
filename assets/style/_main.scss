@@ -105,6 +105,8 @@ main {
             color: $l-modelightDarkBlue;
             box-shadow: 0px 16px 30px -10px $main-shadow;
             border-radius: 15px;
+            padding-left: 67px;
+
             &:hover {
                 cursor: pointer;
             }
@@ -173,7 +175,6 @@ main {
         }
 
         small {
-            display: none;
             position: absolute;
             top: 24px;
             right: 140px;
@@ -228,10 +229,6 @@ main {
             }
 
             span {
-                background-image: url(../face.jpg);
-                background-position: center;
-                background-size: contain;
-                background-repeat: no-repeat;
                 width: 70px;
                 height: 70px;
                 border-radius: 50%;
@@ -245,6 +242,17 @@ main {
 
                 @media only screen and (min-width: 1440px) {
                     margin-right: 45px;
+                }
+
+                img {
+                    border-radius: 50%;
+                    width: 70px;
+                    height: 70px;
+
+                    @media only screen and (min-width: 768px) {
+                        width: 117px;
+                        height: 117px;
+                    }
                 }
             }
 
@@ -465,24 +473,31 @@ main {
                 }
             }
 
-            .twitter {
-                opacity: 0.5;
+            .link-figure {
+                order: 1;
+                .link {
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+            }
 
+            .company-figure {
                 @media only screen and (min-width: 768px) {
-                    order: -1;
+                    order: 1;
+                }
+            }
+
+            .twitter {
+                @media only screen and (min-width: 768px) {
+                    // order: -1;
                 }
             }
 
             .location {
                 @media only screen and (min-width: 768px) {
                     order: -1;
-                }
-            }
-
-            .link {
-                &:hover {
-                    cursor: pointer;
-                    text-decoration: underline;
                 }
             }
         }

@@ -173,6 +173,7 @@ main .form input {
   color: #4b6a9b;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
   border-radius: 15px;
+  padding-left: 67px;
 }
 main .form input:hover {
   cursor: pointer;
@@ -243,7 +244,6 @@ main .form button:active {
   }
 }
 main .form small {
-  display: none;
   position: absolute;
   top: 24px;
   right: 140px;
@@ -300,10 +300,6 @@ main .main-section .user-info {
   }
 }
 main .main-section .user-info span {
-  background-image: url(../face.jpg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -319,6 +315,17 @@ main .main-section .user-info span {
 @media only screen and (min-width: 1440px) {
   main .main-section .user-info span {
     margin-right: 45px;
+  }
+}
+main .main-section .user-info span img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+@media only screen and (min-width: 768px) {
+  main .main-section .user-info span img {
+    width: 117px;
+    height: 117px;
   }
 }
 main .main-section .user-info aside {
@@ -542,22 +549,22 @@ main .main-section footer figure figcaption {
 main .main-section footer figure .city {
   margin-left: 19.25px;
 }
-main .main-section footer .twitter {
-  opacity: 0.5;
+main .main-section footer .link-figure {
+  order: 1;
+}
+main .main-section footer .link-figure .link:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
-  main .main-section footer .twitter {
-    order: -1;
+  main .main-section footer .company-figure {
+    order: 1;
   }
 }
 @media only screen and (min-width: 768px) {
   main .main-section footer .location {
     order: -1;
   }
-}
-main .main-section footer .link:hover {
-  cursor: pointer;
-  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

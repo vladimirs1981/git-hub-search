@@ -59,36 +59,33 @@
                     id="search"
                     placeholder="Search GitHub username..."
                 />
-                <button type="submit">Search</button>
-                <small>No results</small>
+                <button class="searchButton" type="submit">Search</button>
+                <small class="noresults">No results</small>
             </form>
             <section class="main-section">
                 <section class="user-info">
-                    <span></span>
+                    <span class="image"></span>
                     <aside>
-                        <h2>The Octocat</h2>
-                        <a>@octocat</a>
+                        <h2 class="main_profile-name"></h2>
+                        <a class="main_profile-username"></a>
                         <h3 class="joined-date">Joined 25 Jan 2011</h3>
                     </aside>
                 </section>
                 <article class="info-text">
-                    <h3>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit. Donec odio. Quisque volutpat mattis eros.
-                    </h3>
+                    <h3 class="bio-info"></h3>
                 </article>
                 <section class="stats">
                     <div id="repos" class="stats-div">
                         <h3>Repos</h3>
-                        <h1>8</h1>
+                        <h1 class="main_profile-repos"></h1>
                     </div>
                     <div id="followers" class="stats-div">
                         <h3>Followers</h3>
-                        <h1>3938</h1>
+                        <h1 class="main_profile-followers"></h1>
                     </div>
                     <div class="stats-div">
                         <h3>Following</h3>
-                        <h1>9</h1>
+                        <h1 class="main_profile-following"></h1>
                     </div>
                 </section>
                 <footer class="links">
@@ -103,9 +100,9 @@
                                 fill="currentColor"
                             />
                         </svg>
-                        <figcaption class="city">San Francisco</figcaption>
+                        <figcaption class="city"></figcaption>
                     </figure>
-                    <figure>
+                    <figure class="link-figure">
                         <svg
                             height="20"
                             width="20"
@@ -121,10 +118,10 @@
                             </g>
                         </svg>
                         <figcaption class="link">
-                            <a>https://github.blog</a>
+                            <a class="main_profile-url"></a>
                         </figcaption>
                     </figure>
-                    <figure class="twitter">
+                    <figure>
                         <svg
                             height="18"
                             width="20"
@@ -135,9 +132,9 @@
                                 fill="currentColor"
                             />
                         </svg>
-                        <figcaption>Not Available</figcaption>
+                        <figcaption class="twitter"></figcaption>
                     </figure>
-                    <figure>
+                    <figure class="company-figure">
                         <svg
                             height="20"
                             width="20"
@@ -149,11 +146,12 @@
                                 />
                             </g>
                         </svg>
-                        <figcaption>@github</figcaption>
+                        <figcaption class="company"></figcaption>
                     </figure>
                 </footer>
             </section>
         </main>
         <script src="./theme.js"></script>
+        <script src="./main.js"></script>
     </body>
 </html>
