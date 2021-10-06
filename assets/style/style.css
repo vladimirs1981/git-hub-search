@@ -517,7 +517,6 @@ main .main-section footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 40px;
-    column-gap: 70px;
   }
 }
 @media only screen and (min-width: 1440px) {
