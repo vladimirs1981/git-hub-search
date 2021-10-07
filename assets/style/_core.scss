@@ -61,6 +61,10 @@ body {
             input {
                 background-color: $d-modeDarkBlue;
                 box-shadow: none;
+                color: $textWhite;
+                &::placeholder {
+                    color: $textWhite;
+                }
             }
         }
 
@@ -98,7 +102,7 @@ body {
                 figure {
                     color: $textWhite;
 
-                    figcaption {
+                    a {
                         color: $textWhite;
                     }
                 }

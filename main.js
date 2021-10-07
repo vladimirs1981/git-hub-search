@@ -29,8 +29,9 @@ const fetchUsers = async (user = 'octocat') => {
 
 const updateUsers = (res) => {
     function setOPacity(api_data, data) {
-        if (api_data === null) {
+        if (api_data == '' || api_data === null) {
             data.style.opacity = 0.5;
+            data.style.textDecoration = 'none';
             data.previousElementSibling.style.opacity = 0.5;
             return 'Not available';
         } else {
@@ -72,17 +73,31 @@ const updateUsers = (res) => {
 
         cityContainer.innerHTML = setOPacity(res.data.location, cityContainer);
 
-        urlContainer.innerHTML = setOPacity(res.data.html_url, urlContainer);
+        urlContainer.innerHTML = setOPacity(res.data.blog, urlContainer);
+
+        urlContainer.href =
+            res.data.blog === '' || res.data.blog == null ? '' : res.data.blog;
 
         twitterContainer.innerHTML = setOPacity(
             res.data.twitter_username,
             twitterContainer
         );
 
+        twitterContainer.href =
+            res.data.twitter_username == null
+                ? ''
+                : 'https://twitter.com/' + res.data.twitter_username;
+
         companyContainer.innerHTML = setOPacity(
             res.data.company,
             companyContainer
         );
+
+        companyContainer.href =
+            res.data.company === '' || res.data.company == null
+                ? ''
+                : 'https://github.com/' +
+                  res.data.company.replace(/[^A-Z0-9]/gi, '').toLowerCase();
     } else {
         noresults.style.display = 'block';
     }

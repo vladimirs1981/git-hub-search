@@ -101,11 +101,14 @@ main {
             line-height: 25px;
             width: 100%;
             border: none;
-            height: 69px;
-            color: $l-modelightDarkBlue;
+            height: 60px;
+            color: $blackHover;
             box-shadow: 0px 16px 30px -10px $main-shadow;
             border-radius: 15px;
-            padding-left: 67px;
+            padding-left: 40px;
+            @media only screen and (min-width: 768px) {
+                padding-left: 67px;
+            }
 
             &:hover {
                 cursor: pointer;
@@ -123,6 +126,7 @@ main {
 
             @media only screen and (min-width: 768px) {
                 font-size: 18px;
+                height: 69px;
             }
         }
 
@@ -176,11 +180,20 @@ main {
 
         small {
             position: absolute;
-            top: 24px;
-            right: 140px;
+            top: 40px;
+            right: 94px;
             font-size: 15px;
             font-weight: bold;
             color: $errorRed;
+
+            @media only screen and (min-width: 768px) {
+                top: 25px;
+                right: 118px;
+            }
+
+            @media only screen and (min-width: 768px) {
+                right: 140px;
+            }
         }
     }
 
@@ -278,7 +291,7 @@ main {
                     font-size: 16px;
                     font-style: normal;
                     font-weight: bold;
-                    line-height: 23px;
+                    line-height: 24px;
                     color: $l-modeDarkGrey;
 
                     @media only screen and (min-width: 768px) {
@@ -307,6 +320,7 @@ main {
                 .joined-date {
                     font-size: 13px;
                     line-height: 19px;
+                    margin-top: 6px;
                     font-style: normal;
                     font-weight: normal;
                     color: $l-modelightGrey;
@@ -395,10 +409,11 @@ main {
                     color: $l-modelightDarkBlue;
                     font-style: normal;
                     font-weight: normal;
+                    margin-bottom: 1px;
 
                     @media only screen and (min-width: 768px) {
                         font-size: 13px;
-                        line-height: 19.25px;
+                        line-height: 10px;
                         margin-bottom: 1px;
                     }
                 }
@@ -407,6 +422,7 @@ main {
                     font-size: 16px;
                     color: $l-modeDarkGrey;
                     line-height: 24px;
+                    margin-top: 7px;
 
                     @media only screen and (min-width: 768px) {
                         font-size: 22px;
@@ -440,13 +456,14 @@ main {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 margin-left: 40px;
-                // column-gap: 70px;
+                column-gap: 70px;
             }
 
             @media only screen and (min-width: 1440px) {
                 margin: 0;
                 grid-area: 4 / 2 / 5 / 3;
                 margin-bottom: 30px;
+                column-gap: 50px;
             }
 
             figure {
@@ -455,12 +472,13 @@ main {
                 margin-bottom: 16px;
                 color: $l-modelightDarkBlue;
 
-                figcaption {
+                a {
                     font-size: 13px;
                     line-height: 19.25px;
                     font-weight: 400;
                     color: $l-modelightDarkBlue;
                     margin-left: 13px;
+                    text-decoration: none;
 
                     @media only screen and (min-width: 768px) {
                         font-size: 15px;
@@ -474,24 +492,21 @@ main {
             }
 
             .link-figure {
-                order: 1;
-                .link {
-                    &:hover {
-                        cursor: pointer;
-                        text-decoration: underline;
-                    }
+                @media only screen and (min-width: 768px) {
+                    order: 1;
+                }
+            }
+
+            .link {
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
                 }
             }
 
             .company-figure {
                 @media only screen and (min-width: 768px) {
                     order: 1;
-                }
-            }
-
-            .twitter {
-                @media only screen and (min-width: 768px) {
-                    // order: -1;
                 }
             }
 

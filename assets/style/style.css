@@ -47,6 +47,10 @@ body {
 .dark-mode main .form input {
   background-color: #1e2a47;
   box-shadow: none;
+  color: #ffffff;
+}
+.dark-mode main .form input::placeholder {
+  color: #ffffff;
 }
 .dark-mode main .main-section {
   background-color: #1e2a47;
@@ -69,7 +73,7 @@ body {
 .dark-mode main .main-section footer figure {
   color: #ffffff;
 }
-.dark-mode main .main-section footer figure figcaption {
+.dark-mode main .main-section footer figure a {
   color: #ffffff;
 }
 
@@ -169,11 +173,16 @@ main .form input {
   line-height: 25px;
   width: 100%;
   border: none;
-  height: 69px;
-  color: #4b6a9b;
+  height: 60px;
+  color: #222731;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
   border-radius: 15px;
-  padding-left: 67px;
+  padding-left: 40px;
+}
+@media only screen and (min-width: 768px) {
+  main .form input {
+    padding-left: 67px;
+  }
 }
 main .form input:hover {
   cursor: pointer;
@@ -192,6 +201,7 @@ main .form input::placeholder {
 @media only screen and (min-width: 768px) {
   main .form input {
     font-size: 18px;
+    height: 69px;
   }
 }
 main .form img {
@@ -245,11 +255,22 @@ main .form button:active {
 }
 main .form small {
   position: absolute;
-  top: 24px;
-  right: 140px;
+  top: 40px;
+  right: 94px;
   font-size: 15px;
   font-weight: bold;
   color: #f74646;
+}
+@media only screen and (min-width: 768px) {
+  main .form small {
+    top: 25px;
+    right: 118px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  main .form small {
+    right: 140px;
+  }
 }
 main .main-section {
   width: 327px;
@@ -352,7 +373,7 @@ main .main-section .user-info aside h2 {
   font-size: 16px;
   font-style: normal;
   font-weight: bold;
-  line-height: 23px;
+  line-height: 24px;
   color: #2b3442;
 }
 @media only screen and (min-width: 768px) {
@@ -382,6 +403,7 @@ main .main-section .user-info aside a {
 main .main-section .user-info aside .joined-date {
   font-size: 13px;
   line-height: 19px;
+  margin-top: 6px;
   font-style: normal;
   font-weight: normal;
   color: #697c9a;
@@ -474,11 +496,12 @@ main .main-section .stats .stats-div h3 {
   color: #4b6a9b;
   font-style: normal;
   font-weight: normal;
+  margin-bottom: 1px;
 }
 @media only screen and (min-width: 768px) {
   main .main-section .stats .stats-div h3 {
     font-size: 13px;
-    line-height: 19.25px;
+    line-height: 10px;
     margin-bottom: 1px;
   }
 }
@@ -486,6 +509,7 @@ main .main-section .stats .stats-div h1 {
   font-size: 16px;
   color: #2b3442;
   line-height: 24px;
+  margin-top: 7px;
 }
 @media only screen and (min-width: 768px) {
   main .main-section .stats .stats-div h1 {
@@ -517,6 +541,7 @@ main .main-section footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 40px;
+    column-gap: 70px;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -524,6 +549,7 @@ main .main-section footer {
     margin: 0;
     grid-area: 4/2/5/3;
     margin-bottom: 30px;
+    column-gap: 50px;
   }
 }
 main .main-section footer figure {
@@ -532,15 +558,16 @@ main .main-section footer figure {
   margin-bottom: 16px;
   color: #4b6a9b;
 }
-main .main-section footer figure figcaption {
+main .main-section footer figure a {
   font-size: 13px;
   line-height: 19.25px;
   font-weight: 400;
   color: #4b6a9b;
   margin-left: 13px;
+  text-decoration: none;
 }
 @media only screen and (min-width: 768px) {
-  main .main-section footer figure figcaption {
+  main .main-section footer figure a {
     font-size: 15px;
     line-height: 22px;
   }
@@ -548,10 +575,12 @@ main .main-section footer figure figcaption {
 main .main-section footer figure .city {
   margin-left: 19.25px;
 }
-main .main-section footer .link-figure {
-  order: 1;
+@media only screen and (min-width: 768px) {
+  main .main-section footer .link-figure {
+    order: 1;
+  }
 }
-main .main-section footer .link-figure .link:hover {
+main .main-section footer .link:hover {
   cursor: pointer;
   text-decoration: underline;
 }
