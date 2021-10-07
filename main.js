@@ -27,14 +27,16 @@ const fetchUsers = async (user = 'octocat') => {
     return { data };
 };
 
-const updateUsers = (res) => {
-    function setOPacity(api_data, data) {
+function updateUsers(res) {
+    function updateLinksData(api_data, targetElement) {
         if (api_data == '' || api_data === null) {
-            data.style.opacity = 0.5;
-            data.style.textDecoration = 'none';
-            data.previousElementSibling.style.opacity = 0.5;
+            targetElement.style.opacity = 0.5;
+            targetElement.style.textDecoration = 'none';
+            targetElement.previousElementSibling.style.opacity = 0.5;
             return 'Not available';
         } else {
+            targetElement.style.opacity = 1;
+            targetElement.previousElementSibling.style.opacity = 1;
             return `${api_data}`;
         }
     }
@@ -71,14 +73,17 @@ const updateUsers = (res) => {
 
         followingContiner.innerHTML = `${res.data.following}`;
 
-        cityContainer.innerHTML = setOPacity(res.data.location, cityContainer);
+        cityContainer.innerHTML = updateLinksData(
+            res.data.location,
+            cityContainer
+        );
 
-        urlContainer.innerHTML = setOPacity(res.data.blog, urlContainer);
+        urlContainer.innerHTML = updateLinksData(res.data.blog, urlContainer);
 
         urlContainer.href =
             res.data.blog === '' || res.data.blog == null ? '' : res.data.blog;
 
-        twitterContainer.innerHTML = setOPacity(
+        twitterContainer.innerHTML = updateLinksData(
             res.data.twitter_username,
             twitterContainer
         );
@@ -88,7 +93,7 @@ const updateUsers = (res) => {
                 ? ''
                 : 'https://twitter.com/' + res.data.twitter_username;
 
-        companyContainer.innerHTML = setOPacity(
+        companyContainer.innerHTML = updateLinksData(
             res.data.company,
             companyContainer
         );
@@ -101,12 +106,10 @@ const updateUsers = (res) => {
     } else {
         noresults.style.display = 'block';
     }
-};
+}
 
 const showData = () => {
     fetchUsers(inputValue.value).then((res) => {
-        console.log(res);
-
         updateUsers(res);
     });
 };
