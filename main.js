@@ -18,14 +18,14 @@ const noresults = document.querySelector('.noresults');
 const client_secret = '7753fdad58bb42c0d28741064dc7aa67381d8530';
 const client_id = 'Iv1.71a7a9f9a18f113a';
 
-const fetchUsers = async (user = 'octocat') => {
+async function fetchUsers(user = 'octocat') {
     const api_call = await fetch(
         `https://api.github.com/users/${user}?client_id=${client_id}&client_secret=${client_secret}`
     );
 
     const data = await api_call.json();
     return { data };
-};
+}
 
 function updateUsers(res) {
     function updateLinksData(api_data, targetElement) {

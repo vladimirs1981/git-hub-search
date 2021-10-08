@@ -53,7 +53,7 @@ main {
             .button-text {
                 font-size: 13px;
                 font-weight: bold;
-                color: $l-modelightDarkBlue;
+                color: $lModeLightDarkBlue;
                 text-transform: uppercase;
                 letter-spacing: 2.5px;
                 line-height: 19.25px;
@@ -65,7 +65,7 @@ main {
             .button-image {
                 width: 20px;
                 height: 20px;
-                color: $l-modelightDarkBlue;
+                color: $lModeLightDarkBlue;
                 &:hover {
                     path {
                         color: $blackHover;
@@ -85,7 +85,7 @@ main {
         min-width: 327px;
         margin-bottom: 16px;
         height: auto;
-        background-color: $l-modeWhiteish;
+        background-color: $lModeWhiteish;
         border-radius: 15px;
 
         @media only screen and (min-width: 768px) {
@@ -203,7 +203,7 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: $l-modeWhiteish;
+        background-color: $lModeWhiteish;
         border-radius: 15px;
         box-shadow: 0px 16px 30px -10px $main-shadow;
 
@@ -292,7 +292,7 @@ main {
                     font-style: normal;
                     font-weight: bold;
                     line-height: 24px;
-                    color: $l-modeDarkGrey;
+                    color: $lModeDarkGrey;
 
                     @media only screen and (min-width: 768px) {
                         font-size: 26px;
@@ -323,7 +323,7 @@ main {
                     margin-top: 6px;
                     font-style: normal;
                     font-weight: normal;
-                    color: $l-modelightGrey;
+                    color: $lModeLightGrey;
 
                     @media only screen and (min-width: 768px) {
                         font-size: 15px;
@@ -362,7 +362,7 @@ main {
                 line-height: 25px;
                 font-style: normal;
                 font-weight: 400;
-                color: $l-modelightDarkBlue;
+                color: $lModeLightDarkBlue;
 
                 @media only screen and (min-width: 768px) {
                     font-size: 15px;
@@ -373,7 +373,7 @@ main {
         .stats {
             display: flex;
             justify-content: space-evenly;
-            background-color: $l-modeGreyish;
+            background-color: $lModeGreyish;
             border-radius: 10px;
             width: 279px;
             height: 85px;
@@ -406,7 +406,7 @@ main {
 
                 h3 {
                     font-size: 11px;
-                    color: $l-modelightDarkBlue;
+                    color: $lModeLightDarkBlue;
                     font-style: normal;
                     font-weight: normal;
                     margin-bottom: 1px;
@@ -420,7 +420,7 @@ main {
 
                 h1 {
                     font-size: 16px;
-                    color: $l-modeDarkGrey;
+                    color: $lModeDarkGrey;
                     line-height: 24px;
                     margin-top: 7px;
 
@@ -470,13 +470,13 @@ main {
                 display: flex;
                 justify-content: flex-start;
                 margin-bottom: 16px;
-                color: $l-modelightDarkBlue;
+                color: $lModeLightDarkBlue;
 
                 a {
                     font-size: 13px;
                     line-height: 19.25px;
                     font-weight: 400;
-                    color: $l-modelightDarkBlue;
+                    color: $lModeLightDarkBlue;
                     margin-left: 13px;
                     text-decoration: none;
 

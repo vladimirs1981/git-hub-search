@@ -11,16 +11,16 @@ body {
     min-height: 100vh;
     width: 100%;
     font-family: $primaryFont;
-    background-color: $l-modeGreyish;
+    background-color: $lModeGreyish;
     display: flex;
     justify-content: center;
 }
 //dark mode
 .dark-mode {
-    background-color: $d-modeDarkGrey;
+    background-color: $dModeDarkGrey;
 
     main {
-        background-color: $d-modeDarkGrey;
+        background-color: $dModeDarkGrey;
 
         header {
             h1 {
@@ -56,10 +56,10 @@ body {
 
         .form {
             color: $textWhite;
-            background-color: $d-modeDarkGrey;
+            background-color: $dModeDarkGrey;
 
             input {
-                background-color: $d-modeDarkBlue;
+                background-color: $dModeDarkBlue;
                 box-shadow: none;
                 color: $textWhite;
                 &::placeholder {
@@ -69,7 +69,7 @@ body {
         }
 
         .main-section {
-            background-color: $d-modeDarkBlue;
+            background-color: $dModeDarkBlue;
             box-shadow: none;
 
             .user-info {
@@ -88,7 +88,7 @@ body {
             }
 
             .stats {
-                background-color: $d-modeDarkGrey;
+                background-color: $dModeDarkGrey;
 
                 .stats-div {
                     h3,
