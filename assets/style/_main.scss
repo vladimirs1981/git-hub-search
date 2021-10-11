@@ -215,8 +215,8 @@ main {
             display: grid;
             width: 730px;
             height: 419px;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             justify-items: start;
             align-items: center;
         }
@@ -278,7 +278,7 @@ main {
 
                 @media only screen and (min-width: 1440px) {
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: repeat(2, 1fr);
                     margin: 0;
                     align-content: center;
                     justify-content: space-evenly;
