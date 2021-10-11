@@ -1,0 +1,112 @@
+@use '_colors' as *;
+@use '_variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: $primaryFont;
+    background-color: $lModeGreyish;
+    display: flex;
+    justify-content: center;
+}
+//dark mode
+.dark-mode {
+    background-color: $dModeDarkGrey;
+
+    main {
+        background-color: $dModeDarkGrey;
+
+        header {
+            h1 {
+                color: $textWhite;
+            }
+
+            button {
+                .button-text {
+                    color: $textWhite;
+                    &:hover {
+                        color: $greyHover;
+                    }
+                }
+
+                .button-image {
+                    color: $textWhite;
+                    #moon {
+                        display: none;
+                    }
+
+                    #sun {
+                        display: block;
+
+                        &:hover {
+                            path {
+                                color: $greyHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form {
+            color: $textWhite;
+            background-color: $dModeDarkGrey;
+
+            input {
+                background-color: $dModeDarkBlue;
+                box-shadow: none;
+                color: $textWhite;
+                &::placeholder {
+                    color: $textWhite;
+                }
+            }
+        }
+
+        .main-section {
+            background-color: $dModeDarkBlue;
+            box-shadow: none;
+
+            .user-info {
+                aside {
+                    h2,
+                    .joined-date {
+                        color: $textWhite;
+                    }
+                }
+            }
+
+            .info-text {
+                h3 {
+                    color: $textWhite;
+                }
+            }
+
+            .stats {
+                background-color: $dModeDarkGrey;
+
+                .stats-div {
+                    h3,
+                    h1 {
+                        color: $textWhite;
+                    }
+                }
+            }
+
+            footer {
+                figure {
+                    color: $textWhite;
+
+                    a {
+                        color: $textWhite;
+                    }
+                }
+            }
+        }
+    }
+}
